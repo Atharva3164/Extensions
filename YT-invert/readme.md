@@ -2,6 +2,7 @@
 
 A simple and stylish Chrome extension that adds a **toggle switch** to invert the YouTube video player's colors — perfect for dark mode users! It also includes a **keyboard shortcut** (`Alt+I`) to instantly toggle the effect without opening the popup.
 
+## for Windows/linux (`Alt+I`)
 ## for mac (`Cmd+Shift+I`)
 ---
 
