@@ -16,5 +16,4 @@ A simple and stylish Chrome extension that adds a **toggle switch** to invert th
 
 ---
 
-## 📦 Folder Structure
 
