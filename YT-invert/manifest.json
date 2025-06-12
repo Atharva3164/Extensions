@@ -20,5 +20,17 @@
       "matches": [ "*://*.youtube.com/watch*" ],
       "js": ["content.js"]
     }
-  ]
+  ],
+  "commands": {
+    "toggle-invert": {
+      "suggested_key": {
+        "default": "Alt+I",
+        "mac": "Command+Shift+I"
+      },
+      "description": "Toggle YouTube video invert"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
 }
