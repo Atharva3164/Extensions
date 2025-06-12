@@ -1,7 +1,3 @@
-// content.js
-// This content script runs on every YouTube page load.
-// It listens for messages from popup.js and background.js.
-
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   if (msg.action === 'invertOn') {
     applyInvert();
@@ -10,17 +6,16 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   }
 });
 
-// Helper: add a CSS rule (filter: invert(1)) to <div id="movie_player">
 function applyInvert() {
   const playerDiv = document.getElementById('movie_player');
   if (!playerDiv) return;
   
-  // Add a data-attribute so we can remove it later
+
   playerDiv.setAttribute('data-inverted', 'true');
-  // Apply the invert filter
+
   playerDiv.style.filter = 'invert(1)';
   
-  // Optional: Show a brief notification
+
   showNotification('Video colors inverted');
 }
 
@@ -38,9 +33,9 @@ function removeInvert() {
   }
 }
 
-// Optional: Show a brief visual notification
+
 function showNotification(message) {
-  // Remove existing notification if any
+
   const existing = document.getElementById('invert-notification');
   if (existing) existing.remove();
   
@@ -63,7 +58,7 @@ function showNotification(message) {
   
   document.body.appendChild(notification);
   
-  // Auto-remove after 2 seconds
+
   setTimeout(() => {
     notification.style.opacity = '0';
     setTimeout(() => {
@@ -74,10 +69,10 @@ function showNotification(message) {
   }, 2000);
 }
 
-// On page load, check stored state and apply if needed
+
 chrome.storage.local.get(['isInverted'], (result) => {
   if (result.isInverted) {
-    // Add a small delay to ensure the player is loaded
+
     setTimeout(() => {
       applyInvert();
     }, 1000);
