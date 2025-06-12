@@ -7,7 +7,7 @@
       margin: 0;
       padding: 15px;
       font-family: "Segoe UI", sans-serif;
-      width: 240px;
+      width: 250px;
       background-color: #f4f4f4;
       color: #222;
       display: flex;
@@ -64,13 +64,27 @@
       transform: translateX(26px);
     }
 
-    .label {
-      font-size: 16px;
-      margin-top: 10px;
+    .shortcut-info {
+      margin: 15px 0;
+      padding: 10px;
+      background-color: #e8f4f8;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 12px;
+      border: 1px solid #d0e7f0;
+    }
+
+    .shortcut-key {
+      font-weight: bold;
+      background-color: #fff;
+      padding: 2px 6px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      font-family: monospace;
     }
 
     .about {
-      margin-top: 20px;
+      margin-top: 15px;
       font-size: 14px;
     }
 
@@ -82,20 +96,35 @@
     .about a:hover {
       text-decoration: underline;
     }
+
+    .note {
+      font-size: 12px;
+      color: #666;
+      text-align: center;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
-  <div class="title">YouTube Video Invert </div>
-
+  <div class="title">YouTube Video Invert</div>
+  
   <label class="switch">
     <input type="checkbox" id="invertToggle" />
     <span class="slider"></span>
   </label>
 
+  <div class="shortcut-info">
+    <div>Keyboard Shortcut:</div>
+    <span class="shortcut-key">Alt+I</span>
+    <div style="font-size: 10px; margin-top: 5px;">(Cmd+Shift+I on Mac)</div>
+  </div>
+
   <div class="about">
     <a href="https://www.kaggle.com/atharvashinde3164" target="_blank">About</a>
   </div>
-  <p>If not work's reload site once</p>
+
+  <p class="note">If it doesn't work, reload the page once</p>
+  
   <script src="popup.js"></script>
 </body>
 </html>
