@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Force Dark Toggle",
+  "description": "Toggle dark mode with Ctrl + Alt + I or popup button",
+  "version": "1.0",
+  "permissions": ["scripting", "activeTab", "commands", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "toggle-dark": {
+      "suggested_key": {
+        "default": "Alt+Shift+I",
+        "mac": "Alt+Shift+I"
+      },
+      "description": "Toggle dark mode"
+    }
+  },
+  "action": {
+    "default_title": "Force Dark Mode",
+    "default_popup": "popup.html"
+  }
+}
