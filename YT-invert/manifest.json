@@ -1,12 +1,13 @@
 {
   "manifest_version": 3,
   "name": "YouTube Invert Toggle",
-  "version": "1.0",
+  "version": "1.2",
   "description": "Adds a toggle button to invert the YouTube player colors.",
   "permissions": [
     "storage",
     "activeTab",
-    "scripting"
+    "scripting",
+    "tabs"
   ],
   "host_permissions": [
     "*://*.youtube.com/*"
